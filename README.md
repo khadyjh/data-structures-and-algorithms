@@ -1,3 +1,5 @@
 # data-structures-and-algorithms
 
-![array-reverse](array-reverse.png)
+### array-reverce
+
+![array-reverse](array-reverse/array-reverse.png)
