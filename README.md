@@ -1,8 +1,8 @@
 # data-structures-and-algorithms
 
-### array-reverce
+### table of content
 
-![array-reverse](array-reverse/array-reverse.png)
+
 
 | Challenge   | link |
 | ----------- | ----------- |
