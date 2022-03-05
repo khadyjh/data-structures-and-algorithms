@@ -13,22 +13,22 @@ public class App {
         System.out.println(new App().getGreeting());
 
         LinkedList<Integer> linkedList=new LinkedList<>();
-        linkedList.addFirst(1);
-        linkedList.addFirst(2);
+        linkedList.insert(1);
+        linkedList.insert(2);
         System.out.println(linkedList.includes(100));
-//        linkedList.addFirst(2);
         linkedList.print();
+        linkedList.insert(55);
         System.out.println(linkedList.toString());
 
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////");
 
         LinkedList<String> str=new LinkedList<>();
 
-        str.addFirst("education");
-        str.addFirst("name");
-        System.out.println(str.includes("name"));
-        str.print();
-        System.out.println(str.toString());
+//        str.insert("education");
+//        str.insert("name");
+//        System.out.println(str.includes("name"));
+//        str.print();
+//        System.out.println(str.toString());
 //        str.printAllItems();
     }
 }

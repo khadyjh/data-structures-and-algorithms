@@ -9,22 +9,11 @@ public class LinkedList <T> {
         this.head=null;
     }
 
-    public void addFirst(T val){
+    public void insert(T val){
         Node newNode=new Node(val);
         newNode.next=this.head;
         this.head=newNode;
 
-    }
-
-    public String toString(){
-        String str=" ";
-        Node pointer=this.head;
-        while (pointer!=null){
-            str= str +"{"+ pointer.value +"} ->";
-            pointer=pointer.next;
-        }
-        str=str + "NULL";
-        return str;
     }
 
     public boolean includes(T val){
@@ -38,6 +27,17 @@ public class LinkedList <T> {
 
 
         return false;
+    }
+
+    public String toString(){
+        String str=" ";
+        Node pointer=this.head;
+        while (pointer!=null){
+            str= str +"{"+ pointer.value +"} ->";
+            pointer=pointer.next;
+        }
+        str=str + "NULL";
+        return str;
     }
 
     public void print(){
