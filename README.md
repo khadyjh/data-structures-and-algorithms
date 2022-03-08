@@ -12,3 +12,5 @@
 | Challenge 3 | this challenge about writing algorithm for Binary Search without using built-in  function            | [Link](BinarySearch/BinarySearch.md)         |
 | Challenge 4 | this challenge about Mock Interviews  |[Link](Challenge4/challenge.md)              |
 | Challenge 5 | this challenge about writing code to implement linked list data structure  | [Link](challenge5/linkedlist.md)             |
+| Challenge 6 | this challenge about writing more method to implement linked list data structure|[Link](./challenge6/linkedList2.md)|
+| Challenge 7 | this challenge about writing more method to implement linked list data structure|[Link](./challenge7/readme.md)|
