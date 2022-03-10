@@ -17,6 +17,9 @@ public class App {
         LinkedList<Integer> linkedList=new LinkedList<>();
         linkedList.insert(1);
         linkedList.insert(2);
+        linkedList.insert(2);
+        linkedList.insert(2);
+        linkedList.insert(2);
         System.out.println(linkedList.includes(100));
         linkedList.print();
         linkedList.insert(55);

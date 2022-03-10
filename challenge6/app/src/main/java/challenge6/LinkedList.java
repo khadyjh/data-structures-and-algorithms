@@ -2,7 +2,7 @@ package challenge6;
 
 public class LinkedList<T> {
 
-    Node head;
+    Node<T> head;
 
     public LinkedList(){
 
@@ -10,7 +10,7 @@ public class LinkedList<T> {
     }
 
     public void insert(T val){
-        Node newNode=new Node(val);
+        Node<T> newNode=new Node(val);
         newNode.next=this.head;
         this.head=newNode;
 
@@ -50,10 +50,10 @@ public class LinkedList<T> {
     }
 
     public void append(T val) {
-        Node pointer = this.head;
+        Node<T> pointer = this.head;
         while (pointer != null) {
             if (pointer.next == null) {
-                Node newNode = new Node(val);
+                Node<T> newNode = new Node<T>(val);
                 pointer.next = newNode;
                 newNode.next = null;
                 break;

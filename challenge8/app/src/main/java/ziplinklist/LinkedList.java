@@ -1,4 +1,4 @@
-package challenge7;
+package ziplinklist;
 
 public class LinkedList<T> {
 
@@ -103,23 +103,69 @@ public class LinkedList<T> {
         int count= size()-1;
         Node<T> pointer=this.head;
 
-            if(k>count ){
-                System.out.println("the index out of bound ");
-            }else {
-                while (pointer!=null){
-                    if(count==k) {
-                        return pointer.value;
-                    }
-                    pointer=pointer.next;
-                    count--;
+        if(k>count ){
+            System.out.println("the index out of bound ");
+        }else {
+            while (pointer!=null){
+                if(count==k) {
+                    return pointer.value;
                 }
+                pointer=pointer.next;
+                count--;
             }
+        }
 
 
         throw new IllegalArgumentException();
     }
 
 
+    public LinkedList<T>  zipLists(LinkedList<T> one,LinkedList<T> two){
+        Node<T> pointer1=one.head;
+        Node<T> pointer2=two.head;
+        Node<T> oneNext;
+        Node<T> twoNext;
+
+        if(one.size()==0)
+        {
+            return two;
+        }else if(two.size()==0){
+            return one;
+        }else if(one.size()==0 && two.size()==0){
+            return null;
+        }else if(one.size()==1 && two.size()==1){
+            one.head.next=two.head;
+            return one;
+        } else {
+            while (pointer1.next!=null && pointer2.next!=null){
+                oneNext=pointer1.next;
+                twoNext=pointer2.next;
+
+                pointer1.next=pointer2;
+                pointer2.next=oneNext;
+
+                pointer1=oneNext;
+                pointer2=twoNext;
+
+//                if(pointer1.next==null){
+//                    pointer1.next=pointer2;
+//                }
+
+            }
+
+            if(pointer2.next==null){
+                pointer2.next=pointer1.next;
+                pointer1.next=pointer2;
+            }
+            if (pointer1.next==null){
+                pointer1.next=pointer2;
+            }
+        }
+
+        two.head=null;
+//        System.out.println(two);
+        return one;
+    }
 
 
     public String toString(){

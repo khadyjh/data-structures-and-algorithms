@@ -1,4 +1,4 @@
-package challenge7;
+package ziplinklist;
 
 public class Node<T> {
     T value;
