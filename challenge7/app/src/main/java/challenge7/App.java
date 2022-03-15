@@ -24,5 +24,7 @@ public class App {
 
         System.out.println(linkedList2);
 
+        linkedList1.KthFromEnd(1);
+
     }
 }
