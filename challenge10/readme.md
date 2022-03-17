@@ -80,3 +80,8 @@ enqueue => method tack one argument and add it in the end of the queue it used t
 and loop through it, so it takes O(n) for time  
 
 dequeue => method remove the first element in the queue and return its value
+
+
+
+
+i got help from [here](https://www.techiedelight.com/implement-a-queue-using-stack-data-structure/) in Pseudo Queue
