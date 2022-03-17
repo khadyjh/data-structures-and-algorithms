@@ -7,6 +7,12 @@ import java.util.EmptyStackException;
 public class Stack<T> {
     private Node<T> top;
 
+    public Node<T> getTop() {
+        return top;
+    }
+
+
+
     public Stack(){
         this.top=null;
     }
