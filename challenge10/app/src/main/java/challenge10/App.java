@@ -3,8 +3,7 @@
  */
 package challenge10;
 
-import challenge10.Queue.Queue;
-import challenge10.stack.Stack;
+import challenge10.Queue.PseudoQueue;
 
 public class App {
     public String getGreeting() {
@@ -12,14 +11,14 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-
-        Stack<Integer> stack=new Stack<>();
-
-        stack.push(1);
-        stack.push(2);
-        stack.push(5);
-        stack.push(6); //top element
+//        System.out.println(new App().getGreeting());
+//
+//        Stack<Integer> stack=new Stack<>();
+//
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(5);
+//        stack.push(6); //top element
 //        if(stack.isEmpty()){
 //            System.out.println("Empty stack");
 //        }else {
@@ -32,15 +31,30 @@ public class App {
 
         ////////////////////////////////////////////////// queue //////////////////////////////////////////
 
-        Queue<Integer> queue=new Queue<>();
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
+//        Queue<Integer> queue=new Queue<>();
+//        queue.enqueue(1);
+//        queue.enqueue(2);
+//        queue.enqueue(3);
+//
+//
+//        System.out.println(queue);
+//
+//        System.out.println(queue.dequeue());
 
 
-        System.out.println(queue);
+        ////////////////////////////////////////////////// Pseudoueue //////////////////////////////////////////
 
-        System.out.println(queue.dequeue());
+        PseudoQueue<Integer> pseudoqueue=new PseudoQueue<>();
+        pseudoqueue.enqueue(1);
+//        pseudoqueue.enqueue(2);
+//        pseudoqueue.enqueue(3);
+//        pseudoqueue.enqueue(4);
+//        pseudoqueue.enqueue(45);
+//        pseudoqueue.enqueue(5);
+
+        System.out.println(pseudoqueue);
+
+        System.out.println(pseudoqueue.dequeue());
 
 
 

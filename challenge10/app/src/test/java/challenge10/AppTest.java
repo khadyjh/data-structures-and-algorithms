@@ -3,6 +3,7 @@
  */
 package challenge10;
 
+import challenge10.Queue.PseudoQueue;
 import challenge10.Queue.Queue;
 import challenge10.stack.Stack;
 import org.junit.jupiter.api.DisplayName;
@@ -219,6 +220,62 @@ class AppTest {
                 Queue<Integer>queue=new Queue<>();
 
                 queue.dequeue();
+            }
+        });
+    }
+
+    ///////////////////////////////////////////// Queue test ////////////////////////////////////////
+
+    @Test
+    @DisplayName("Can successfully enqueue multiple values ")
+    void pseudoueueMultiTest(){
+
+        PseudoQueue<Integer> pseudoueue=new PseudoQueue<>();
+        pseudoueue.enqueue(1);
+        pseudoueue.enqueue(2);
+        pseudoueue.enqueue(3);
+
+        String exp=" front {1} <- {2} <- {3} <-  rear ";
+        assertEquals(exp,pseudoueue.toString());
+    }
+
+    @Test
+    @DisplayName("Can successfully dequeue  ")
+    void dequeuePseudoueueTest(){
+
+        PseudoQueue<Integer> pseudoueue=new PseudoQueue<>();
+        pseudoueue.enqueue(1);
+        pseudoueue.enqueue(2);
+        pseudoueue.enqueue(3);
+        int exp=1;
+        assertEquals(exp,pseudoueue.dequeue());
+    }
+
+    @Test
+    @DisplayName("Can successfully dequeue multi  ")
+    void dequeuePseudoueueMultiTest(){
+
+        PseudoQueue<Integer> pseudoueue=new PseudoQueue<>();
+        pseudoueue.enqueue(1);
+        pseudoueue.enqueue(2);
+        pseudoueue.enqueue(3);
+        pseudoueue.dequeue();
+        pseudoueue.dequeue();
+        pseudoueue.dequeue();
+        String  exp=" front  rear ";
+        assertEquals(exp,pseudoueue.toString());
+    }
+
+    @Test
+    @DisplayName("Calling dequeue in empty  raises exception")
+    void PseudoueueExceptionTest(){
+        assertThrows(EmptyStackException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+
+                PseudoQueue<Integer> pseudoueue=new PseudoQueue<>();
+
+                pseudoueue.dequeue();
             }
         });
     }
