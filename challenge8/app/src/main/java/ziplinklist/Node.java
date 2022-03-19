@@ -1,11 +1,10 @@
-package linkedList;
+package ziplinklist;
 
-public class Node <T>{
+public class Node<T> {
     T value;
     Node<T> next;
 
     public Node(T value){
         this.value=value;
     }
-
 }

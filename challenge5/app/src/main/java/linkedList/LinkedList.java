@@ -2,7 +2,7 @@ package linkedList;
 
 public class LinkedList<T> {
 
-    Node head;
+    Node<T> head;
 
     public LinkedList(){
 

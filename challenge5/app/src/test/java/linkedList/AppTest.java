@@ -8,85 +8,85 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
-
-    @Test
-    @DisplayName("is Empty Test")
-    void isEmptyTest(){
-        LinkedList<Integer> linkedList=new LinkedList<>();
-        assertEquals(" NULL",linkedList.toString());
-    }
-
-    @Test
-    @DisplayName("insert Into Linked list Test")
-    void insertIntoTest(){
-        LinkedList<String> linkedList=new LinkedList<>();
-        linkedList.insert("saga");
-        linkedList.insert("laith");
-        String result=linkedList.toString();
-        String exp=" {laith} ->{saga} ->NULL";
-        assertEquals(exp,result);
-    }
-
-    @Test
-    @DisplayName("head Test")
-    void headTest(){
-        LinkedList<Integer> linkedList=new LinkedList<>();
-        linkedList.insert(1);
-
-        Node node=new Node<>(1);
-        Node pointer=linkedList.head;
-
-        System.out.println(pointer.value);
-        assertEquals(1,pointer.value);
-    }
-
-    @Test
-    @DisplayName("insert multiple nodes Test")
-    void insertMultipleTest(){
-        LinkedList<String> linkedList=new LinkedList<>();
-        linkedList.insert("saga");
-        linkedList.insert("laith");
-        linkedList.insert("haitham");
-        linkedList.insert("noor");
-        String result=linkedList.toString();
-        String exp=" {noor} ->{haitham} ->{laith} ->{saga} ->NULL";
-        assertEquals(exp,result);
-
-    }
-
-    @Test
-    @DisplayName("Include True Test")
-    void IncludeTrueTest(){
-        LinkedList<Integer> linkedList=new LinkedList<>();
-        linkedList.insert(1);
-        linkedList.insert(2);
-        boolean result=linkedList.includes(2);
-        assertTrue(result);
-    }
-
-    @Test
-    @DisplayName("Include False Test")
-    void IncludeFalseTest(){
-        LinkedList<Integer> linkedList=new LinkedList<>();
-        linkedList.insert(1);
-        linkedList.insert(2);
-        boolean result=linkedList.includes(3);
-        assertFalse(result);
-    }
-
-    @Test
-    @DisplayName("return a collection of all the values that exist in the linked list")
-    void PrintTest(){
-        LinkedList<Integer> linkedList=new LinkedList<>();
-        linkedList.insert(1);
-        linkedList.insert(2);
-
-        assertEquals(" {2} ->{1} ->NULL",linkedList.toString());
-    }
+//    @Test void appHasAGreeting() {
+//        App classUnderTest = new App();
+//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+//    }
+//
+//    @Test
+//    @DisplayName("is Empty Test")
+//    void isEmptyTest(){
+//        LinkedList<Integer> linkedList=new LinkedList<>();
+//        assertEquals(" NULL",linkedList.toString());
+//    }
+//
+//    @Test
+//    @DisplayName("insert Into Linked list Test")
+//    void insertIntoTest(){
+//        LinkedList<String> linkedList=new LinkedList<>();
+//        linkedList.insert("saga");
+//        linkedList.insert("laith");
+//        String result=linkedList.toString();
+//        String exp=" {laith} ->{saga} ->NULL";
+//        assertEquals(exp,result);
+//    }
+//
+//    @Test
+//    @DisplayName("head Test")
+//    void headTest(){
+//        LinkedList<Integer> linkedList=new LinkedList<>();
+//        linkedList.insert(1);
+//
+//        Node node=new Node<>(1);
+//        Node pointer=linkedList.head;
+//
+//        System.out.println(pointer.value);
+//        assertEquals(1,pointer.value);
+//    }
+//
+//    @Test
+//    @DisplayName("insert multiple nodes Test")
+//    void insertMultipleTest(){
+//        LinkedList<String> linkedList=new LinkedList<>();
+//        linkedList.insert("saga");
+//        linkedList.insert("laith");
+//        linkedList.insert("haitham");
+//        linkedList.insert("noor");
+//        String result=linkedList.toString();
+//        String exp=" {noor} ->{haitham} ->{laith} ->{saga} ->NULL";
+//        assertEquals(exp,result);
+//
+//    }
+//
+//    @Test
+//    @DisplayName("Include True Test")
+//    void IncludeTrueTest(){
+//        LinkedList<Integer> linkedList=new LinkedList<>();
+//        linkedList.insert(1);
+//        linkedList.insert(2);
+//        boolean result=linkedList.includes(2);
+//        assertTrue(result);
+//    }
+//
+//    @Test
+//    @DisplayName("Include False Test")
+//    void IncludeFalseTest(){
+//        LinkedList<Integer> linkedList=new LinkedList<>();
+//        linkedList.insert(1);
+//        linkedList.insert(2);
+//        boolean result=linkedList.includes(3);
+//        assertFalse(result);
+//    }
+//
+//    @Test
+//    @DisplayName("return a collection of all the values that exist in the linked list")
+//    void PrintTest(){
+//        LinkedList<Integer> linkedList=new LinkedList<>();
+//        linkedList.insert(1);
+//        linkedList.insert(2);
+//
+//        assertEquals(" {2} ->{1} ->NULL",linkedList.toString());
+//    }
 
 
 }

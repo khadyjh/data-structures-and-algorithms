@@ -1,4 +1,4 @@
-package challenge6;
+package challenge7;
 
 public class LinkedList<T> {
 
@@ -10,18 +10,18 @@ public class LinkedList<T> {
     }
 
     public void insert(T val){
-        Node<T> newNode=new Node(val);
+        Node<T> newNode=new Node<>(val);
         newNode.next=this.head;
         this.head=newNode;
 
     }
 
     public void InsertAfter(T valInsert,T valAfter){
-        Node pointer=this.head;
+        Node<T> pointer=this.head;
 // 1 2 3
         while (pointer!=null){
             if(pointer.value == valAfter){
-                Node newNode=new Node(valInsert);
+                Node<T> newNode=new Node<>(valInsert);
                 newNode.next=pointer.next;
                 pointer.next=newNode;
                 break;
@@ -33,13 +33,13 @@ public class LinkedList<T> {
     }
 
     public void insertBefore(T valInsert,T valBefore){
-        Node pointer=this.head;
+        Node<T> pointer=this.head;
         if(pointer.value==valBefore){
             insert(valInsert);
         }
         while (pointer.next!=null){
             if(pointer.next.value == valBefore){
-                Node newNode=new Node(valInsert);
+                Node<T> newNode=new Node<>(valInsert);
                 newNode.next=pointer.next;
                 pointer.next=newNode;
                 break;
@@ -51,14 +51,9 @@ public class LinkedList<T> {
 
     public void append(T val) {
         Node<T> pointer = this.head;
-
-        if(pointer==null){
-            insert(val);
-        }
-
         while (pointer != null) {
             if (pointer.next == null) {
-                Node<T> newNode = new Node<T>(val);
+                Node<T> newNode = new Node<>(val);
                 pointer.next = newNode;
                 newNode.next = null;
                 break;
@@ -68,7 +63,7 @@ public class LinkedList<T> {
     }
 
     public void delete(T val){
-        Node pointer=this.head;
+        Node<T> pointer=this.head;
         while (pointer!=null){
             if(pointer.next.value==val){
                 pointer.next=pointer.next.next;
@@ -81,7 +76,7 @@ public class LinkedList<T> {
     }
 
     public boolean includes(T val){
-        Node pointer=this.head;
+        Node<T> pointer=this.head;
         while (pointer != null){
             if(pointer.value == val){
                 return true;
@@ -93,15 +88,49 @@ public class LinkedList<T> {
         return false;
     }
 
-    public String toString(){
-        String str=" ";
-        Node pointer=this.head;
+    public int size(){
+        int counter=0;
+        Node<T> pointer=this.head;
         while (pointer!=null){
-            str= str +"{"+ pointer.value +"} ->";
+            counter++;
             pointer=pointer.next;
         }
-        str=str + "NULL";
-        return str;
+        return counter;
+
+    }
+
+    public T KthFromEnd(int k)  {
+        int count= size()-1;
+        Node<T> pointer=this.head;
+
+            if(k>count ){
+                System.out.println("the index out of bound ");
+            }else {
+                while (pointer!=null){
+                    if(count==k) {
+                        return pointer.value;
+                    }
+                    pointer=pointer.next;
+                    count--;
+                }
+            }
+
+
+        throw new IllegalArgumentException();
+    }
+
+
+
+
+    public String toString(){
+        StringBuilder str= new StringBuilder(" ");
+        Node<T> pointer=this.head;
+        while (pointer!=null){
+            str.append("{").append(pointer.value).append("} ->");
+            pointer=pointer.next;
+        }
+        str.append("NULL");
+        return str.toString();
     }
 
     public void print(){
