@@ -51,6 +51,11 @@ public class LinkedList<T> {
 
     public void append(T val) {
         Node<T> pointer = this.head;
+
+        if(pointer==null){
+            insert(val);
+        }
+
         while (pointer != null) {
             if (pointer.next == null) {
                 Node<T> newNode = new Node<T>(val);
