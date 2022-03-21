@@ -2,6 +2,8 @@
 queue for AnimalShelter that contain only dogs and cats 
 
 ## Whiteboard Process
+![enQueueAnimal](../img/enQueueAnimal.png)
+![deQueueAnimal](../img/deQueueAnimal.png)
 
 ## Approach & Efficiency
 
