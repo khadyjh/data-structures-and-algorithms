@@ -128,6 +128,30 @@ public class BinaryTree {
     }
 
     ////////////////////////////////challenge 16////////////////////////////////////////
+    public int maxTree(){
+        int max=0;
+        if (root != null) {
+            Queue<BTNode> queue = new Queue<>();
+            queue.enqueue(root);
+
+            BTNode node;
+            while (!queue.isEmpty()) {
+                node = queue.dequeue();
+                if(node.getData()>max){
+                    max=node.getData();
+                }
+
+                if (node.getLeft() != null) {
+                    queue.enqueue(node.getLeft());
+                }
+
+                if (node.getRight() != null) {
+                    queue.enqueue(node.getRight());
+                }
+            }
+        }
+        return max;
+    }
 
 
     @Override
