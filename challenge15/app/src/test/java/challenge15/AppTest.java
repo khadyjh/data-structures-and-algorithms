@@ -107,6 +107,32 @@ class AppTest {
     }
 
 
+    //////////////////////////////////////////////////////challenge16/////////////////////////////////////////////
+
+    @Test
+    @DisplayName(" max tree ")
+    public void test10(){
+        BinaryTree binaryTree=new BinaryTree();
+        binaryTree.setRoot(new BTNode(1));
+
+        binaryTree.getRoot().setLeft(new BTNode(2));
+        binaryTree.getRoot().setRight(new BTNode(3));
+
+
+        binaryTree.getRoot().getLeft().setLeft(new BTNode(20));
+        binaryTree.getRoot().getLeft().setRight(new BTNode(30));
+        assertEquals(30,binaryTree.maxTree());
+
+    }
+
+    @Test
+    @DisplayName(" max tree empty ")
+    public void test11(){
+        BinaryTree binaryTree=new BinaryTree();
+
+        assertEquals(0,binaryTree.maxTree());
+
+    }
 
 
 
