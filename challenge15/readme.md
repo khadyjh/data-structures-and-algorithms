@@ -60,6 +60,8 @@ maxTree => method travers through binary tree level by level to find maximum val
 ![challenge17](../img/challenge17.png)
 ![challenge171](../img/challenge171.png)
 
+
+
 # Challenge Summary
 
 Method to return list of all values in the tree, in the order they were encountered(breadthFirst,level by level).
