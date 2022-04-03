@@ -52,4 +52,25 @@ search => function return boolean and tack element to search about using recursi
 
 
 ## Solution
-maxTree => method travers through binary tree level by level to find maximum value in tree of int int  
+maxTree => method travers through binary tree level by level to find maximum value in tree of int 
+
+
+
+# challenge 17
+![challenge17](../img/challenge17.png)
+![challenge171](../img/challenge171.png)
+
+# Challenge Summary
+
+Method to return list of all values in the tree, in the order they were encountered(breadthFirst,level by level).
+
+## Whiteboard Process
+
+## Approach & Efficiency
+| method       | time complexity | space complexity |
+|--------------|-----------------|------------------|
+| breadthFirst | o(n)            | O(n)             |
+
+
+## Solution
+breadthFirst => method travers through binary tree level by level using recursion 

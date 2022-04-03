@@ -4,8 +4,6 @@
 package challenge15;
 
 import challenge15.data.BTNode;
-import challenge15.data.BinaryNode;
-import challenge15.structure.BinarySearchTree;
 import challenge15.structure.BinaryTree;
 
 public class App {
@@ -59,6 +57,9 @@ public class App {
 
        binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
        binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
+
+
+        System.out.println( binaryTree1.breadthFirst()+"////////////////");
 
 
         System.out.println(binaryTree1);

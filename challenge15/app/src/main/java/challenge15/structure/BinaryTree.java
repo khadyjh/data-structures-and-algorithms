@@ -4,6 +4,7 @@ import challenge15.Queue.Queue;
 import challenge15.data.BTNode;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -41,18 +42,34 @@ public class BinaryTree {
         }
     }
 
-    public void levelOrderTraversalRecursive() {
+    //////////////////////////////////////////challenge 17///////////////////////////////////////////
+    public List<Integer> breadthFirst() {
+        List<Integer> resultList=new ArrayList<>();
         if (root != null) {
             Queue<BTNode> queue = new Queue<>();
             queue.enqueue(root);
-            levelOrderTraversalRecursive(queue);
+           return breadthFirst(queue,resultList);
         } else {
             System.out.println("Tree is empty");
         }
+        return null;
     }
 
-    private void levelOrderTraversalRecursive(Queue<BTNode> queue) {
-        // implement this
+    private  List<Integer> breadthFirst(Queue<BTNode> queue, List<Integer> resultList) {
+
+        if (!queue.isEmpty()) {
+            BTNode node = queue.dequeue();
+            resultList.add(node.getData());
+
+            if (node.getLeft() != null) {
+                queue.enqueue(node.getLeft());
+            }
+            if (node.getRight() != null) {
+                queue.enqueue(node.getRight());
+            }
+            return breadthFirst(queue, resultList);
+        }
+        return resultList;
     }
 
     ////////////////////////////////challenge 15////////////////////////////////////////
