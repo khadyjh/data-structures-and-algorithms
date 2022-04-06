@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Stack;
 
 
-public class BinaryTree {
+public class BinaryTree<T extends Comparable<T>> {
 
     private BTNode root;
 
@@ -42,7 +42,7 @@ public class BinaryTree {
         }
     }
 
-    //////////////////////////////////////////challenge 17///////////////////////////////////////////
+    ////////////////////////////////////////challenge 17///////////////////////////////////////////
     public List<Integer> breadthFirst() {
         List<Integer> resultList=new ArrayList<>();
         if (root != null) {
@@ -170,6 +170,11 @@ public class BinaryTree {
         return max;
     }
 
+
+    ////////////////////////////////challenge 18////////////////////////////////////////
+    public void fizzBuzzTree( BinaryTree<Integer> tree){
+
+    }
 
     @Override
     public String toString() {

@@ -56,7 +56,6 @@ public class BinaryTree<T extends Comparable<T>>{
         if(node==null){
             return null;
         }
-
       Node<String> fizzBuzz=new Node<>();
         if((node.getData()%5)==0 && (node.getData()%3)==0){
             fizzBuzz.setData("FizzBuzz");
@@ -67,10 +66,12 @@ public class BinaryTree<T extends Comparable<T>>{
         }else {
             fizzBuzz.setData(Integer.toString(node.getData()));
         }
-
-        fizzBuzz.setLeftNode(fizzBuzzTree(node.getLeftNode()));
-        fizzBuzz.setRightNode(fizzBuzzTree(node.getRightNode()));
-
+        if(node.getLeftNode()!=null){
+            fizzBuzz.setLeftNode(fizzBuzzTree(node.getLeftNode()));
+        }
+        if(node.getRightNode()!=null){
+            fizzBuzz.setRightNode(fizzBuzzTree(node.getRightNode()));
+        }
         return fizzBuzz;
     }
 
