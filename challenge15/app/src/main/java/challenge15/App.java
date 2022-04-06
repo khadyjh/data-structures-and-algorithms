@@ -47,22 +47,22 @@ public class App {
 //        System.out.println(binarySearchTree.search(20));
 
 
-        BinaryTree binaryTree1=new BinaryTree();
-
-       binaryTree1.setRoot(new BTNode(10));
-
-       binaryTree1.getRoot().setLeft(new BTNode(2));
-       binaryTree1.getRoot().setRight(new BTNode(3));
-
-
-       binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
-       binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
-
-
-        System.out.println( binaryTree1.breadthFirst()+"////////////////");
+//        BinaryTree binaryTree1=new BinaryTree();
+//
+//       binaryTree1.setRoot(new BTNode(10));
+//
+//       binaryTree1.getRoot().setLeft(new BTNode(2));
+//       binaryTree1.getRoot().setRight(new BTNode(3));
+//
+//
+//       binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
+//       binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
 
 
-        System.out.println(binaryTree1);
+//        System.out.println( binaryTree1.breadthFirst()+"////////////////");
+//
+//
+//        System.out.println(binaryTree1);
 
 //       binaryTree1.levelOrderTraversalLoop();
 //

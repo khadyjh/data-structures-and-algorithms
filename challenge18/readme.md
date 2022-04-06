@@ -3,6 +3,9 @@ create FizzBuzz method that take binary tree of int and return binary tree of st
 
 
 ## Whiteboard Process
+![fizzbuzz](../img/fizzBuzz.png)
+
+![fizzbuzz](../img/fizzBuzz1.png)
 
 
 ## Approach & Efficiency
