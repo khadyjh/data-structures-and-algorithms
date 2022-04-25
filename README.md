@@ -23,3 +23,4 @@
 |challenge 16|this challenge about implement max tree method|[Link](./challenge15/readme.md)   |
 |challenge 17|this challenge about implement breadth First method |[Link](./challenge15/readme.md)              |
 |challenge 18|this challenge about implement fizzBuzzTree method  |[Link](./challenge18/readme.md)  |
+|challenge 26|this challenge about implement insertion sort algorithm|[Link](./challenge26/readme.md)|
