@@ -4,6 +4,7 @@
 package challenge15;
 
 import challenge15.data.BTNode;
+import challenge15.structure.BinarySearchTree;
 import challenge15.structure.BinaryTree;
 
 public class App {
@@ -36,12 +37,14 @@ public class App {
 //        binaryTree.postorderDepthFirst();
 
 
-//        BinarySearchTree<Integer> binarySearchTree=new BinarySearchTree<>();
-//        binarySearchTree.insert(10);
-//        binarySearchTree.insert(20);
-//        binarySearchTree.insert(70);
-//        binarySearchTree.insert(5);
-//        binarySearchTree.insert(3);
+        BinarySearchTree<Integer> binarySearchTree=new BinarySearchTree<>();
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(70);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(3);
+
+        binarySearchTree.traverse(BinarySearchTree.TraversalOrder.INORDER);
 //
 //        binarySearchTree.traverse(BinarySearchTree.TraversalOrder.INORDER);
 //        System.out.println(binarySearchTree.search(20));

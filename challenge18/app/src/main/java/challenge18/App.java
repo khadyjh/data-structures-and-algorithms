@@ -8,18 +8,33 @@ public class App {
 
     public static void main(String[] args) {
 
-        BinaryTree<Integer> binaryTree=new BinaryTree<>();
+//        BinaryTree<Integer> binaryTree=new BinaryTree<>();
+//
+//        binaryTree.setRoot(new Node<>(1));
+//
+//        binaryTree.getRoot().setLeftNode(new Node<>(2));
+//        binaryTree.getRoot().setRightNode(new Node<>(3));
+//
+//        binaryTree.getRoot().getLeftNode().setLeftNode(new Node<>(5));
+//        binaryTree.getRoot().getLeftNode().setRightNode(new Node<>(15));
+//
+//
+//        binaryTree.fizzBuzzTree(binaryTree).preorderDepthFirst();
 
-        binaryTree.setRoot(new Node<>(1));
+        BinarySearchTree<Integer> binarySearchTree=new BinarySearchTree<>();
+        binarySearchTree.insert(2);
+        binarySearchTree.insert(7);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(3);
+        binarySearchTree.insert(6);
 
-        binaryTree.getRoot().setLeftNode(new Node<>(2));
-        binaryTree.getRoot().setRightNode(new Node<>(3));
+        System.out.println( binarySearchTree.sumOfOdds(binarySearchTree.getRoot()));
 
-        binaryTree.getRoot().getLeftNode().setLeftNode(new Node<>(5));
-        binaryTree.getRoot().getLeftNode().setRightNode(new Node<>(15));
+        System.out.println(binarySearchTree.search(1));
 
 
-        binaryTree.fizzBuzzTree(binaryTree).preorderDepthFirst();
+//        binarySearchTree.oddSum(new Node<>(1));
+        binarySearchTree.inorder1();
 
 
 

@@ -1,17 +1,23 @@
-package challenge15.structure;
+package challenge18;
 
-import challenge15.data.BinaryNode;
-import challenge15.data.Node;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 
     public enum TraversalOrder {
         INORDER,
         PREORDER,
-        POSTORDER
+        POSTORDER,
     }
 
     private Node<T> root;
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
     private int size;
 
     public void traverse(TraversalOrder order) {
@@ -127,29 +133,105 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(searchTerm.compareTo(root.getData())==0){
             return true;
         }else if(searchTerm.compareTo(root.getData())>0){
-           return searchHelper(searchTerm,root.getRightNode());
+            return searchHelper(searchTerm,root.getRightNode());
         }else if(searchTerm.compareTo(root.getData())<0){
-           return searchHelper(searchTerm,root.getLeftNode());
+            return searchHelper(searchTerm,root.getLeftNode());
         }
 
         return false;
     }
 
-    public void oddSum(Node<T> treeNode){
+    public void oddSum(Node<Integer> treeNode){
+
+
         if (treeNode == null) { // base case
+
             return;
         }
 
-        int sum=0;
-        if((int)treeNode.getData()%2!=0){
-            sum =sum + (int)treeNode.getData();
+        int data=treeNode.getData();
+        if(data%2!=0){
+            List<Integer> oddList=new ArrayList<>();
+            oddList.add(data);
         }
-        System.out.println( "sum of odd numbers =>" + sum);
-        inOrder(treeNode.getLeftNode()); // left
 
-        printNode(treeNode); // root
+        oddSum(treeNode.getLeftNode()); // left
 
-        inOrder(treeNode.getRightNode()); // right
+        oddSum(treeNode); // root
+
+        oddSum(treeNode.getRightNode()); // right
+    }
+
+
+    void inorder()
+    {
+        if (root == null)
+            return;
+
+
+        Stack<Node> s = new Stack<Node>();
+        Node curr = root;
+
+        // traverse the tree
+        while (curr != null || s.size() > 0)
+        {
+
+            /* Reach the left most Node of the
+            curr Node */
+            while (curr !=  null)
+            {
+                /* place pointer to a tree node on
+                   the stack before traversing
+                  the node's left subtree */
+                s.push(curr);
+                curr = curr.getLeftNode();
+            }
+
+            /* Current must be NULL at this point */
+            curr = s.pop();
+
+            System.out.print(curr.getData() + " ");
+
+            /* we have visited the node and its
+               left subtree.  Now, it's right
+               subtree's turn */
+            curr = curr.getRightNode();
+        }
+    }
+
+
+    void inorder1() {
+
+        inorderRec((Node<Integer>) root);
+
+    }
+
+
+    void inorderRec(Node<Integer> root)
+    {
+        if (root != null) {
+            inorderRec(root.getLeftNode());
+            System.out.println(root.getData()+" kjhjgfd ");
+            inorderRec(root.getRightNode());
+        }
+    }
+
+    public static int sum = 0;
+
+    public int sumOfOdds(Node <T> root){
+        if(root == null)
+            return 0;
+        int rootValue = ((Integer)root.getData());
+        if (rootValue % 2 != 0)
+            sum=sum + rootValue;
+
+        if(root.getLeftNode() !=null){
+            sumOfOdds(root.getLeftNode());
+        }
+        if(root.getRightNode()!=null){
+            sumOfOdds(root.getRightNode());
+        }
+        return sum;
     }
 
 
