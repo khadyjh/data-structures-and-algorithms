@@ -10,8 +10,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        int[] arr={};
-        insertionSort(arr);
+        int[] arr={8,4,23,42,16,15};
+//        insertionSort(arr);
+        mergeSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -27,5 +28,65 @@ public class App {
            }
            arr[j+1]=temp;
         }
+    }
+
+
+
+
+
+
+
+    public static void mergeSort(int[] arr){
+        int size=arr.length;
+        if(size>1){
+            int mid=size/2;
+            int[] left=new int[mid];
+            for (int index = 0; index < left.length; index++) {
+                left[index]=arr[index];
+            }
+
+            int[] right=new int[size-mid];
+            for (int index = 0; index < right.length; index++) {
+                right[index]=arr[mid+index];
+            }
+            mergeSort(left);
+
+            mergeSort(right);
+
+            merge(left,right,arr);
+        }
+    }
+
+    public static void merge(int[] left ,int[] right , int[] arr){
+        int i=0;
+        int j=0;
+        int k=0;
+
+        while (i<left.length && j< right.length){
+            if(left[i]<=right[j]){
+                arr[k]=left[i];
+                i=i+1;
+            }else {
+                arr[k]=right[j];
+                j=j+1;
+            }
+            k=k+1;
+        }
+
+        if(i== left.length){
+            while (j < right.length){
+                arr[k]=right[j];
+                j++;
+                k++;
+            }
+
+        }else if(j== right.length){
+            while (i < left.length) {
+                arr[k] = left[i];
+                i++;
+                k++;
+            }
+        }
+
     }
 }
