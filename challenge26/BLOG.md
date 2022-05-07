@@ -22,3 +22,11 @@ tracing insertion sort algorithm
 ### step 5
 
 ![step2](../img/step55.png)
+
+
+# marge Sort
+marge sort algorithm keep dividing the array until became one element array then start to marge it in recursive way
+![](../img/margeBlog1.jpeg)
+
+### marge
+![](../img/margeBlog2.jpeg)
