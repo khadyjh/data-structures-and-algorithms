@@ -25,3 +25,4 @@
 |challenge 18|this challenge about implement fizzBuzzTree method  |[Link](./challenge18/readme.md)  |
 |challenge 26|this challenge about implement insertion sort algorithm|[Link](./challenge26/readme.md)|
 |challenge 27|this challenge about implement marge sort algorithm|[Link](./challenge26/readme.md)|
+|challenge 28|this challenge about implement quick sort algorithm|[Link](./challenge26/readme.md)|

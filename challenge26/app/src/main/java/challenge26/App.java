@@ -12,11 +12,13 @@ public class App {
 
         int[] arr={8,4,23,42,16,15};
 //        insertionSort(arr);
-        mergeSort(arr);
+//        mergeSort(arr);
+        quickSort(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 
 
+    ///////////////////////////////////////////challenge 26 ///////////////////////////////////////////
     public static void insertionSort(int[] arr){
         for (int i=1 ;i<arr.length;i++){
            int j=i-1;
@@ -30,12 +32,7 @@ public class App {
         }
     }
 
-
-
-
-
-
-
+    ///////////////////////////////////////////challenge 27 ///////////////////////////////////////////
     public static void mergeSort(int[] arr){
         int size=arr.length;
         if(size>1){
@@ -89,4 +86,35 @@ public class App {
         }
 
     }
+
+    ///////////////////////////////////////////challenge 28///////////////////////////////////////////
+
+    public static void quickSort(int[] arr, int left , int right){
+        if(left<right){
+            int position=partition(arr,left,right);
+            quickSort(arr,left,position-1);
+            quickSort(arr,position+1,right);
+        }
+    }
+
+    public static int partition(int[] arr, int left, int right){
+        int pivot=arr[right];
+        int low=left-1;
+        for (int index=left ;index<right;index++) {
+            if(arr[index]<=pivot){
+                low++;
+                swap(arr,index,low);
+            }
+        }
+        swap(arr,right,low+1);
+        return low+1;
+    }
+
+    public static void swap(int[] arr, int i, int low){
+        int temp;
+        temp=arr[i];
+        arr[i]=arr[low];
+        arr[low]=temp;
+    }
+
 }

@@ -30,7 +30,7 @@ insertionSort(int[] arr)  => method take array and sort it
 
 
 
-# Challenge 26
+# Challenge 27
 ##  Challenge Summary
 
 implement function for margeSort algorithm
@@ -52,3 +52,31 @@ implement function for margeSort algorithm
 ## Solution
 insertionSort(int[] arr)  => method take array and sort it using recursion 
 marge(int[] lift,int[] right,int[] arr) => method called in marge sort method recursively 
+
+
+#
+#
+
+
+# Challenge 28
+##  Challenge Summary
+
+implement function for quickSort algorithm
+
+## Whiteboard Process
+
+![marge1](../img/quick1.png)
+![marge2](../img/quick.png)
+
+
+## Approach & Efficiency
+
+| method     | time complexity | space complexity |
+|------------|-----------------|------------------|
+| quick sort | O(nlogn)        | O(n)             |
+
+
+
+## Solution
+quickSort(int[] arr, int left , int right)  => method take array and sort it using recursion
+partition(int[] arr, int left, int right) => method called in quickSort method recursively 
