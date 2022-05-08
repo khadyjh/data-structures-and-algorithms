@@ -83,4 +83,46 @@ class AppTest {
 
 
     }
+
+    ///////////////////////////////////////////challenge 28 ///////////////////////////////////////////
+
+    @Test
+    @DisplayName(" margeSort test empty array")
+    void test31(){
+
+        int[] arr={};
+        App.quickSort(arr,0,arr.length-1);
+
+        int[] exp={};
+        assertEquals(Arrays.toString(exp),Arrays.toString(arr));
+
+
+    }
+
+
+    @Test
+    @DisplayName(" margeSort test Reverse-sorted array")
+    void test32(){
+
+        int[] arr={20,18,12,8,5,-2};
+        App.quickSort(arr,0,arr.length-1);
+
+        int[] exp={-2,5,8,12,18,20};
+        assertEquals(Arrays.toString(exp),Arrays.toString(arr));
+
+
+    }
+
+    @Test
+    @DisplayName(" margeSort test Few uniques array")
+    void test33(){
+
+        int[] arr={5,12,7,5,5,7};
+        App.quickSort(arr,0,arr.length-1);
+
+        int[] exp={5,5,5,7,7,12};
+        assertEquals(Arrays.toString(exp),Arrays.toString(arr));
+
+
+    }
 }
