@@ -22,3 +22,25 @@ this challenge about implement hash table data structure
 - contains () => method take key and return true if it in the table and false if isn't
 - get() => method take key and return its value 
 - keys() => method to return set of all keys in the hash table 
+
+
+# challenge 31
+
+## Challenge Summary
+Write a function called repeated word that finds the first word to occur more than once in a string
+
+## Whiteboard Process
+![repeatedWord](../img/repeatedWord1.png)
+![repeatedWord](../img/repeatedWord.png)
+
+## Approach & Efficiency
+
+| method         | time complexity | spase complexity |
+|----------------|-----------------|------------------|
+| repeatedWord() | O(n)            | O(n)             |
+
+
+## Solution
+repeatedWord() => method tacks string and find the first repeated word in the given string then return it  
+check() => helping method to check if the string have special character then return it  
+

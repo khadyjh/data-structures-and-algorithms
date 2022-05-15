@@ -17,29 +17,36 @@ public class App {
 
         System.out.println("Welcome to Hash Tables Class");
 
-        HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put("JAVA", "JAVA");
-        hashMap.put("Amman", "Amman");
-        hashMap.put("Jordan", "Jordan");
-//        hashMap.put("J", "J");
-        hashMap.put("Bob", "Bob");
-        hashMap.put("Carl", "Carl");
-//        hashMap.put("Bob", "Carl");
-        hashMap.put("Italy", "Italy");
+//        HashMap<String, String> hashMap = new HashMap<>();
+//        hashMap.put("JAVA", "JAVA");
+//        hashMap.put("Amman", "Amman");
+//        hashMap.put("Jordan", "Jordan");
+////        hashMap.put("J", "J");
+//        hashMap.put("Bob", "Bob");
+//        hashMap.put("Carl", "Carl");
+////        hashMap.put("Bob", "Carl");
+//        hashMap.put("Italy", "Italy");
 
-        System.out.println(hashMap.get("JAVA"));
-        System.out.println("**********************************************************");
-        System.out.println(hashMap.contains("Java"));
-        System.out.println("**********************************************************");
+//        System.out.println(hashMap.get("JAVA"));
+//        System.out.println("**********************************************************");
+//        System.out.println(hashMap.contains("Java"));
+//        System.out.println("**********************************************************");
+//
+//        hashMap.Keys();
+//
+//
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//
+//        java.util.HashMap<String,String> test=new java.util.HashMap<>();
+//        test.put("key","value");
+//        System.out.println(test);
 
-        hashMap.Keys();
-
-
+        HashMap<String, Integer> hashMap = new HashMap<>();
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        String result= hashMap.repeatedWord("It was a queer, sultry summer/ the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...");
+        System.out.println("result => " + result);
 
-        java.util.HashMap<String,String> test=new java.util.HashMap<>();
-        test.put("key","value");
-        System.out.println(test);
+
 
     }
 }
