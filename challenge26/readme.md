@@ -73,7 +73,7 @@ implement function for quickSort algorithm
 
 | method     | time complexity | space complexity |
 |------------|-----------------|------------------|
-| quick sort | O(nlogn)        | O(n)             |
+| quick sort | O(nlogn)        | O(1)             |
 
 
 

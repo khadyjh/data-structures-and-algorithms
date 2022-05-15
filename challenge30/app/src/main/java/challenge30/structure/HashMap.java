@@ -3,9 +3,7 @@ package challenge30.structure;
 import challenge30.data.HashNode;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class HashMap<K ,V> {
     private ArrayList<HashNode<K, V>> bucketArray;
@@ -50,7 +48,7 @@ public class HashMap<K ,V> {
 //            arrayIndex = arrayIndex * -1;
 //        }
 
-        System.out.println("The index of => " + key + " is => " + arrayIndex);
+//        System.out.println("The index of => " + key + " is => " + arrayIndex);
 
         return arrayIndex;
     }
@@ -120,11 +118,12 @@ public class HashMap<K ,V> {
 
     public boolean contains(K key){
         int bucketIndex = getBucketIndex(key);
+        int hashCode=hashCode(key);
 
         HashNode<K, V> head = bucketArray.get(bucketIndex);
         // Search key in chain
         while (head != null) {
-            if (head.getKey().equals(key))
+            if (head.getKey().equals(key) && head.getHashCode().equals(hashCode))
                return true;
             head = head.getNext();
         }
@@ -149,4 +148,47 @@ public class HashMap<K ,V> {
 
         return keyList;
     }
+
+    //////////////////////////////////////////////////// challenge 31 //////////////////////////////////
+
+    public String repeatedWord(String string){
+
+        HashMap<String,Integer> hashMap=new HashMap<>();
+
+        string=string.toLowerCase(Locale.ROOT);
+        String[] words=string.split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            String item=words[i].toLowerCase(Locale.ROOT);
+            String checkedWord=check(item);
+            if (!hashMap.contains(checkedWord)){
+                hashMap.put(checkedWord,1);
+            }else {
+                return checkedWord;
+            }
+        }
+        return "no duplicate value";
+    }
+
+    public String check(String word){
+        if(word.contains(",") || word.contains("/") || word.contains(":") || word.contains(".") || word.contains(" ") || word.contains("?") ){
+            word=word.substring(0,word.length()-1);
+        }
+        return word;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

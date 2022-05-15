@@ -26,3 +26,5 @@
 |challenge 26|this challenge about implement insertion sort algorithm|[Link](./challenge26/readme.md)|
 |challenge 27|this challenge about implement marge sort algorithm|[Link](./challenge26/readme.md)|
 |challenge 28|this challenge about implement quick sort algorithm|[Link](./challenge26/readme.md)|
+|challenge 30|this challenge about implement hash map data structure |[Link](./challenge30/readme.md)|
+|challenge 31|this challenge about implement repeated word method using hash map |[Link](./challenge30/readme.md)|
