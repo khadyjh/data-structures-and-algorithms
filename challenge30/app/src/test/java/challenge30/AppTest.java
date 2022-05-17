@@ -3,9 +3,15 @@
  */
 package challenge30;
 
+import challenge30.binaryTree.BinaryNode;
+import challenge30.binaryTree.BinaryTree;
 import challenge30.structure.HashMap;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -153,6 +159,69 @@ class AppTest {
         String exp="it";
 
         assertEquals(exp,result);
+    }
+
+    //////////////////////////////////////////////////// challenge 32 //////////////////////////////////
+
+    @Test
+    @DisplayName("test tree intersection")
+    public void test12(){
+        BinaryTree<Integer> tree1=new BinaryTree<>();
+
+        //level 1
+        tree1.setRoot(new BinaryNode<>(150));
+        // level 2
+        tree1.getRoot().setLeft(new BinaryNode<>(100));
+        tree1.getRoot().setRight(new BinaryNode<>(250));
+        // level 3
+        tree1.getRoot().getLeft().setLeft(new BinaryNode<>(75));
+        tree1.getRoot().getLeft().setRight(new BinaryNode<>(160));
+
+        tree1.getRoot().getRight().setLeft(new BinaryNode<>(200));
+        tree1.getRoot().getRight().setRight(new BinaryNode<>(350));
+
+        //level 4
+        tree1.getRoot().getLeft().getRight().setLeft(new BinaryNode<>(125));
+        tree1.getRoot().getLeft().getRight().setRight(new BinaryNode<>(175));
+
+        tree1.getRoot().getRight().getRight().setLeft(new BinaryNode<>(300));
+        tree1.getRoot().getRight().getRight().setRight(new BinaryNode<>(500));
+
+
+        BinaryTree<Integer> tree2=new BinaryTree<>();
+        //level 1
+        tree2.setRoot(new BinaryNode<>(42));
+        // level 2
+        tree2.getRoot().setLeft(new BinaryNode<>(100));
+        tree2.getRoot().setRight(new BinaryNode<>(600));
+        // level 3
+        tree2.getRoot().getLeft().setLeft(new BinaryNode<>(15));
+        tree2.getRoot().getLeft().setRight(new BinaryNode<>(160));
+
+        tree2.getRoot().getRight().setLeft(new BinaryNode<>(200));
+        tree2.getRoot().getRight().setRight(new BinaryNode<>(350));
+
+        //level 4
+        tree2.getRoot().getLeft().getRight().setLeft(new BinaryNode<>(125));
+        tree2.getRoot().getLeft().getRight().setRight(new BinaryNode<>(175));
+
+        tree2.getRoot().getRight().getRight().setLeft(new BinaryNode<>(4));
+        tree2.getRoot().getRight().getRight().setRight(new BinaryNode<>(500));
+
+       List<Integer> result = App.treeIntersection(tree1,tree2);
+
+       List<Integer> exp=new ArrayList<>();
+       exp.add(100);
+       exp.add(160);
+       exp.add(125);
+       exp.add(175);
+       exp.add(200);
+       exp.add(350);
+       exp.add(500);
+
+
+
+       assertEquals(exp,result);
     }
 
 }

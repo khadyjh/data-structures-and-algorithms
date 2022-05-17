@@ -51,27 +51,45 @@ public class App {
 
         BinaryTree<Integer> tree1=new BinaryTree<>();
 
-        tree1.setRoot(new BinaryNode<>(10));
+        //level 1
+        tree1.setRoot(new BinaryNode<>(150));
+        // level 2
+        tree1.getRoot().setLeft(new BinaryNode<>(100));
+        tree1.getRoot().setRight(new BinaryNode<>(250));
+        // level 3
+        tree1.getRoot().getLeft().setLeft(new BinaryNode<>(75));
+        tree1.getRoot().getLeft().setRight(new BinaryNode<>(160));
 
-        tree1.getRoot().setLeft(new BinaryNode<>(50));
-        tree1.getRoot().setRight(new BinaryNode<>(80));
+        tree1.getRoot().getRight().setLeft(new BinaryNode<>(200));
+        tree1.getRoot().getRight().setRight(new BinaryNode<>(350));
 
-        tree1.getRoot().getLeft().setLeft(new BinaryNode<>(90));
-        tree1.getRoot().getLeft().setRight(new BinaryNode<>(60));
+        //level 4
+        tree1.getRoot().getLeft().getRight().setLeft(new BinaryNode<>(125));
+        tree1.getRoot().getLeft().getRight().setRight(new BinaryNode<>(175));
 
-        tree1.getRoot().getRight().setLeft(new BinaryNode<>(6));
+        tree1.getRoot().getRight().getRight().setLeft(new BinaryNode<>(300));
+        tree1.getRoot().getRight().getRight().setRight(new BinaryNode<>(500));
+
 
         BinaryTree<Integer> tree2=new BinaryTree<>();
+        //level 1
+        tree2.setRoot(new BinaryNode<>(42));
+        // level 2
+        tree2.getRoot().setLeft(new BinaryNode<>(100));
+        tree2.getRoot().setRight(new BinaryNode<>(600));
+        // level 3
+        tree2.getRoot().getLeft().setLeft(new BinaryNode<>(15));
+        tree2.getRoot().getLeft().setRight(new BinaryNode<>(160));
 
-        tree2.setRoot(new BinaryNode<>(10));
+        tree2.getRoot().getRight().setLeft(new BinaryNode<>(200));
+        tree2.getRoot().getRight().setRight(new BinaryNode<>(350));
 
-        tree2.getRoot().setLeft(new BinaryNode<>(50));
-        tree2.getRoot().setRight(new BinaryNode<>(80));
+        //level 4
+        tree2.getRoot().getLeft().getRight().setLeft(new BinaryNode<>(125));
+        tree2.getRoot().getLeft().getRight().setRight(new BinaryNode<>(175));
 
-        tree2.getRoot().getLeft().setLeft(new BinaryNode<>(90));
-        tree2.getRoot().getLeft().setRight(new BinaryNode<>(60));
-
-        tree2.getRoot().getRight().setLeft(new BinaryNode<>(6));
+        tree2.getRoot().getRight().getRight().setLeft(new BinaryNode<>(4));
+        tree2.getRoot().getRight().getRight().setRight(new BinaryNode<>(500));
 
 //        System.out.println(tree1.preorderDepthFirst());
 
@@ -88,7 +106,7 @@ public class App {
         List<Integer> tree2List=tree2.preorderDepthFirst();
         List<Integer> result=new ArrayList<>();
         
-//        System.out.println(tree1List.toString());
+
 
         HashMap<Integer,Integer> treeIntersection = new HashMap<>();
 
@@ -115,7 +133,7 @@ public class App {
 
         // only if size equals
         for (int i = 0; i < tree1List.size(); i++) {
-            treeIntersection.put(tree2List.get(i),1);
+            treeIntersection.put(tree1List.get(i),1);
         }
 
         for (int i = 0; i <tree2List.size(); i++) {

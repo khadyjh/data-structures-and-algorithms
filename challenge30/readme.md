@@ -44,3 +44,23 @@ Write a function called repeated word that finds the first word to occur more th
 repeatedWord() => method tacks string and find the first repeated word in the given string then return it  
 check() => helping method to check if the string have special character then return it  
 
+
+
+# challenge 32
+
+## Challenge Summary
+Write a function called treeIntersection that tack two binary tree and return the matching element 
+
+## Whiteboard Process
+![hashedtree](../img/hashedtree.png)
+![treehashed](../img/treehashed.png)
+
+## Approach & Efficiency
+
+| method             | time complexity | spase complexity |
+|--------------------|-----------------|------------------|
+| treeIntersection() | O(n)            | O(n)             |
+
+
+## Solution
+treeIntersection() => method tacks tow binary tree and find the matching element and return them as list   
