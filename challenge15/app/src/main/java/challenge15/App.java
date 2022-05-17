@@ -60,8 +60,14 @@ public class App {
        binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
        binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
 
+        binaryTree1.getRoot().getRight().setLeft(new BTNode(5));
+        binaryTree1.getRoot().getRight().setRight(new BTNode(5));
 
-        System.out.println(binaryTree1);
+        binaryTree1.getRoot().getRight().getLeft().setLeft(new BTNode(-5));
+
+
+//        System.out.println(binaryTree1);
+        System.out.println(binaryTree1.leftSum(binaryTree1.getRoot()));
 
 //       binaryTree1.levelOrderTraversalLoop();
 //

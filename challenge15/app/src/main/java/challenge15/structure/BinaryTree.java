@@ -41,6 +41,27 @@ public class BinaryTree {
         }
     }
 
+
+    public int leftSum(BTNode root){
+        int sum=0;
+        if (root != null) {
+            Queue<BTNode> queue = new Queue<>();
+            queue.enqueue(root);
+            BTNode node;
+            while (!queue.isEmpty()) {
+                node = queue.dequeue();
+                if (node.getLeft() != null) {
+                    queue.enqueue(node.getLeft());
+                    sum=sum+ node.getLeft().getData();
+                }
+                if (node.getRight() != null) {
+                    queue.enqueue(node.getRight());
+                }
+            }
+        }
+        return  sum;
+    }
+
     public void levelOrderTraversalRecursive() {
         if (root != null) {
             Queue<BTNode> queue = new Queue<>();
