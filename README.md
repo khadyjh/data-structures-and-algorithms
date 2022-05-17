@@ -28,3 +28,4 @@
 |challenge 28|this challenge about implement quick sort algorithm|[Link](./challenge26/readme.md)|
 |challenge 30|this challenge about implement hash map data structure |[Link](./challenge30/readme.md)|
 |challenge 31|this challenge about implement repeated word method using hash map |[Link](./challenge30/readme.md)|
+|challenge 32|this challenge about implement treeIntersection method using hash map |[Link](./challenge30/readme.md)|
