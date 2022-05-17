@@ -32,3 +32,47 @@ inorder => function use stack to travers through the tree in "left->root->right"
 insert => insert to array using recursion way
 
 search => function return boolean and tack element to search about using recursion way 
+
+# challenge 16
+
+# Challenge Summary
+ find maximum numeric value in binary tree of int 
+
+## Whiteboard Process
+
+![tree](../img/tree.png)
+
+![tree1](../img/tree1.png)
+
+
+## Approach & Efficiency
+| method  | time complexity | space complexity |
+|---------|-----------------|------------------|
+| maxTree | o(n)            | O(n)             |
+
+
+## Solution
+maxTree => method travers through binary tree level by level to find maximum value in tree of int 
+
+
+
+# challenge 17
+![challenge17](../img/challenge17.png)
+![challenge171](../img/challenge171.png)
+
+
+
+# Challenge Summary
+
+Method to return list of all values in the tree, in the order they were encountered(breadthFirst,level by level).
+
+## Whiteboard Process
+
+## Approach & Efficiency
+| method       | time complexity | space complexity |
+|--------------|-----------------|------------------|
+| breadthFirst | o(n)            | O(n)             |
+
+
+## Solution
+breadthFirst => method travers through binary tree level by level using recursion 

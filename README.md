@@ -19,5 +19,12 @@
 |Challenge 11 | this challenge about implement our queue using two stack |[Link](./challenge10/readme.md)                 |
 |challenge 12| queue for AnimalShelter that contain only dogs and cats |[Link](./challenge12/readme.md)    |
 |challenge 13|function to check the balance of bracket using stack |[Link](./challenge13/readme.md)     |
-|challenge15 |  this challenge about implement our binary tree and binary search tree data structure  | [Link](./challenge15/readme.md) |
-
+|challenge 15|  this challenge about implement our binary tree and binary search tree data structure  | [Link](./challenge15/readme.md) |
+|challenge 16|this challenge about implement max tree method|[Link](./challenge15/readme.md)   |
+|challenge 17|this challenge about implement breadth First method |[Link](./challenge15/readme.md)              |
+|challenge 18|this challenge about implement fizzBuzzTree method  |[Link](./challenge18/readme.md)  |
+|challenge 26|this challenge about implement insertion sort algorithm|[Link](./challenge26/readme.md)|
+|challenge 27|this challenge about implement marge sort algorithm|[Link](./challenge26/readme.md)|
+|challenge 28|this challenge about implement quick sort algorithm|[Link](./challenge26/readme.md)|
+|challenge 30|this challenge about implement hash map data structure |[Link](./challenge30/readme.md)|
+|challenge 31|this challenge about implement repeated word method using hash map |[Link](./challenge30/readme.md)|

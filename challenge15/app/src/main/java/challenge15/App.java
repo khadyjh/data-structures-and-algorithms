@@ -4,7 +4,6 @@
 package challenge15;
 
 import challenge15.data.BTNode;
-import challenge15.data.BinaryNode;
 import challenge15.structure.BinarySearchTree;
 import challenge15.structure.BinaryTree;
 
@@ -38,36 +37,45 @@ public class App {
 //        binaryTree.postorderDepthFirst();
 
 
-//        BinarySearchTree<Integer> binarySearchTree=new BinarySearchTree<>();
-//        binarySearchTree.insert(10);
-//        binarySearchTree.insert(20);
-//        binarySearchTree.insert(70);
-//        binarySearchTree.insert(5);
-//        binarySearchTree.insert(3);
+        BinarySearchTree<Integer> binarySearchTree=new BinarySearchTree<>();
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(70);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(3);
+
+        binarySearchTree.traverse(BinarySearchTree.TraversalOrder.INORDER);
 //
 //        binarySearchTree.traverse(BinarySearchTree.TraversalOrder.INORDER);
 //        System.out.println(binarySearchTree.search(20));
 
 
-        BinaryTree binaryTree1=new BinaryTree();
-
-       binaryTree1.setRoot(new BTNode(10));
-
-       binaryTree1.getRoot().setLeft(new BTNode(2));
-       binaryTree1.getRoot().setRight(new BTNode(3));
-
-
-       binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
-       binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
+//        BinaryTree binaryTree1=new BinaryTree();
+//
+//       binaryTree1.setRoot(new BTNode(10));
+//
+//       binaryTree1.getRoot().setLeft(new BTNode(2));
+//       binaryTree1.getRoot().setRight(new BTNode(3));
+//
+//
+//       binaryTree1.getRoot().getLeft().setLeft(new BTNode(20));
+//       binaryTree1.getRoot().getLeft().setRight(new BTNode(30));
 
         binaryTree1.getRoot().getRight().setLeft(new BTNode(5));
         binaryTree1.getRoot().getRight().setRight(new BTNode(5));
+
 
         binaryTree1.getRoot().getRight().getLeft().setLeft(new BTNode(-5));
 
 
 //        System.out.println(binaryTree1);
         System.out.println(binaryTree1.leftSum(binaryTree1.getRoot()));
+
+//        System.out.println( binaryTree1.breadthFirst()+"////////////////");
+//
+//
+//        System.out.println(binaryTree1);
+
 
 //       binaryTree1.levelOrderTraversalLoop();
 //

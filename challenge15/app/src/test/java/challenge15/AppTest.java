@@ -10,6 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -107,8 +108,59 @@ class AppTest {
     }
 
 
+    //////////////////////////////////////////////////////challenge16/////////////////////////////////////////////
+
+    @Test
+    @DisplayName(" max tree ")
+    public void test10(){
+        BinaryTree binaryTree=new BinaryTree();
+        binaryTree.setRoot(new BTNode(1));
+
+        binaryTree.getRoot().setLeft(new BTNode(2));
+        binaryTree.getRoot().setRight(new BTNode(3));
 
 
+        binaryTree.getRoot().getLeft().setLeft(new BTNode(20));
+        binaryTree.getRoot().getLeft().setRight(new BTNode(30));
+        assertEquals(30,binaryTree.maxTree());
+
+    }
+
+    @Test
+    @DisplayName(" max tree empty ")
+    public void test11(){
+        BinaryTree binaryTree=new BinaryTree();
+
+        assertEquals(0,binaryTree.maxTree());
+
+    }
+
+
+    //////////////////////////////////////////////////////challenge17/////////////////////////////////////////////
+
+
+    @Test
+    @DisplayName(" breadthFirst ")
+    public void test12(){
+        BinaryTree binaryTree=new BinaryTree();
+        binaryTree.setRoot(new BTNode(1));
+
+        binaryTree.getRoot().setLeft(new BTNode(2));
+        binaryTree.getRoot().setRight(new BTNode(3));
+
+
+        binaryTree.getRoot().getLeft().setLeft(new BTNode(20));
+        binaryTree.getRoot().getLeft().setRight(new BTNode(30));
+
+        List<Integer> exp=new ArrayList<>();
+        exp.add(1);
+        exp.add(2);
+        exp.add(3);
+        exp.add(20);
+        exp.add(30);
+        assertEquals(exp,binaryTree.breadthFirst());
+
+    }
 
 
 
