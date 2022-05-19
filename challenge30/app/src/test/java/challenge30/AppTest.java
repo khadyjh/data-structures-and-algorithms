@@ -10,6 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -224,4 +225,54 @@ class AppTest {
        assertEquals(exp,result);
     }
 
+
+    //////////////////////////////////////////////////// challenge 32 //////////////////////////////////
+
+    @Test
+    @DisplayName("left join testing ")
+    public void test13(){
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("JAVA", "JAVA");
+        hashMap.put("Amman", "Amman");
+        hashMap.put("Jordan", "Jordan");
+        hashMap.put("jons", "jons");
+
+        HashMap<String, String> hashMap2 = new HashMap<>();
+        hashMap2.put("JAVA", "Bob");
+        hashMap2.put("Jordan", "Amman");
+        hashMap2.put("Carl", "Carl");
+        hashMap2.put("hash", "hash");
+
+        String[] arr={"JAVA:JAVA:Bob","Jordan:Jordan:Amman","Amman:Amman:null","jons:jons:null"};
+        List<String> result=App.leftJoinTable(hashMap,hashMap2);
+        assertEquals(Arrays.toString(arr),result.toString());
+    }
+
+    @Test
+    @DisplayName("left join testing ")
+    public void test14(){
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("JAVA", "JAVA");
+        hashMap.put("Amman", "Amman");
+        hashMap.put("Jordan", "Jordan");
+        hashMap.put("jons", "jons");
+
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+
+        String[] arr={"JAVA:JAVA:null","Jordan:Jordan:null","Amman:Amman:null","jons:jons:null"};
+        List<String> result=App.leftJoinTable(hashMap,hashMap2);
+        assertEquals(Arrays.toString(arr),result.toString());
+    }
+    @Test
+    @DisplayName("left join testing ")
+    public void test15(){
+        HashMap<String, String> hashMap = new HashMap<>();
+
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+        String[] arr={};
+        List<String> result=App.leftJoinTable(hashMap,hashMap2);
+        assertEquals(Arrays.toString(arr),result.toString());
+    }
 }

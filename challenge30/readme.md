@@ -64,3 +64,23 @@ Write a function called treeIntersection that tack two binary tree and return th
 
 ## Solution
 treeIntersection() => method tacks tow binary tree and find the matching element and return them as list   
+
+
+# challenge 33
+
+## Challenge Summary
+Write a function called leftJoinTable that tack two hash tables and apply left join logic on it , so return the result as a list
+
+## Whiteboard Process
+![leftjoin1](../img/leftjoin.png)
+![leftjoin1](../img/leftjoin1.png)
+
+## Approach & Efficiency
+
+| method          | time complexity | spase complexity |
+|-----------------|-----------------|------------------|
+| leftJoinTable() | O(n)            | O(n)             |
+
+
+## Solution
+leftJoinTable() => method tacks two hash tables and apply left join logic on it , and return the matching result as a list 
