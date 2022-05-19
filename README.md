@@ -29,3 +29,4 @@
 |challenge 30|this challenge about implement hash map data structure |[Link](./challenge30/readme.md)|
 |challenge 31|this challenge about implement repeated word method using hash map |[Link](./challenge30/readme.md)|
 |challenge 32|this challenge about implement treeIntersection method using hash map |[Link](./challenge30/readme.md)|
+|challenge 33|this challenge about implement leftjoin method using hash map |[Link](./challenge30/readme.md)|
