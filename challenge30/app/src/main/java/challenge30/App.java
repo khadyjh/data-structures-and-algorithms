@@ -8,6 +8,7 @@ import challenge30.structure.HashMap;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class App {
     public String getGreeting() {
@@ -17,7 +18,10 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        System.out.println("Welcome to Hash Tables Class");
+//        System.out.println("Welcome to Hash Tables Class");
+
+
+
 
         HashMap<String, String> hashMap = new HashMap<>();
 //        hashMap.put("JAVA", "JAVA");
@@ -27,6 +31,8 @@ public class App {
 //        hashMap.put("jons", "jons");
 ////        hashMap.put("Quds", "Quds");
 
+       String val= mostCommon("No. Try not. Do or do not. There is no try.");
+//        System.out.println(val);
         HashMap<String, String> hashMap2 = new HashMap<>();
 //        hashMap2.put("JAVA", "Bob");
 //        hashMap2.put("Jordan", "Amman");
@@ -36,7 +42,7 @@ public class App {
 //        hashMap2.put("hash", "hash");
 
 
-        System.out.println(leftJoinTable(hashMap,hashMap2));
+//        System.out.println(leftJoinTable(hashMap,hashMap2));
 //        System.out.println(hashMap.get("JAVA"));
 //        System.out.println("**********************************************************");
 //        System.out.println(hashMap.contains("Java"));
@@ -102,7 +108,44 @@ public class App {
 //
 //        System.out.println(treeIntersection(tree1,tree2));
 
+        System.out.println(unique("I love cats"));
 
+    }
+
+    public static String mostCommon(String str){
+        int value;
+        java.util.HashMap<String,Integer> hashMap= new java.util.HashMap<String, Integer>();
+
+//        str=str.toLowerCase(Locale.ROOT);
+        String[] words=str.split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            String item=words[i].toLowerCase(Locale.ROOT);
+            String checkedWord=check(item);
+            if (!hashMap.containsKey(checkedWord)){
+                hashMap.put(checkedWord,1);
+            }else {
+                value=hashMap.get(checkedWord)+1;
+                hashMap.put(checkedWord,value);
+            }
+        }
+        int max=0;
+        String maxKey=null;
+        for (String key :
+                hashMap.keySet()) {
+            if(hashMap.get(key)>max){
+                max=hashMap.get(key);
+                maxKey=key;
+            }
+        }
+        return maxKey;
+    }
+
+    public static String check(String word){
+        if(word.contains(",") || word.contains("/") || word.contains(":") || word.contains(".")  || word.contains("?")){
+            word=word.substring(0,word.length()-1);
+        }
+        return word;
     }
 
     //////////////////////////////////////////////////// challenge 32 //////////////////////////////////
@@ -180,4 +223,25 @@ public class App {
         return result;
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public static Boolean unique(String str){
+        java.util.HashMap<String,Integer> isUnique=new java.util.HashMap<>();
+        String[] words=str.split("");
+
+
+        for (int i = 0; i < words.length; i++) {
+            String item=words[i].toLowerCase();
+//            String checkedWord=check(item);
+            if(item.equals("") || item.equals(" ")){
+                continue;
+            }
+            if (!isUnique.containsKey(item)){
+                isUnique.put(item,1);
+            }else {
+               return false;
+            }
+        }
+        return true;
+    }
 }
