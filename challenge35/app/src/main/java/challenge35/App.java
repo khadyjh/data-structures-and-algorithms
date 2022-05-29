@@ -11,9 +11,17 @@ public class App {
     public static void main(String[] args) {
 
         Graph graph=new Graph();
+        System.out.println(graph.addNode("A"));
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
 
-        graph.addNode("A");
 
+        graph.addEdge("A","B");
+        graph.addEdge("A","D");
+        graph.addEdge("D","C");
+        graph.addEdge("B","C");
 
+        System.out.println(graph.breadthFirst("A"));
     }
 }
