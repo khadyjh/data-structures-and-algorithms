@@ -39,6 +39,23 @@ write method to implement breadth first search on graph
 ## Approach & Efficiency
 - the method traverse through the graph element so the time complexity O(n)
 - in the method new data structure used so the space complexity O(n)
+- n number of element in the graph 
 
 ## Solution
 breadthFirst() => method accept one element as the root of the graph then traverse through the element in breadth first Approach 
+
+
+# challenge 37
+write method to calculate the weight in a weighted graph 
+
+## Whiteboard Process
+![challenge37](../img/chall371.png)
+![challenge37](../img/chall37.png)
+
+## Approach & Efficiency
+- the method traverse through the graph element so the time complexity O(n)
+- in the method no new data structure used so the space complexity O(1)
+- n number of element in the graph
+
+## Solution
+businessTrip() => method accept two argument the graph and array of string and calculate the weight of linked edges  

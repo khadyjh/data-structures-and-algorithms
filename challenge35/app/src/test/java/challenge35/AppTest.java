@@ -180,4 +180,75 @@ class AppTest {
 
     }
 
+    ///////////////////////////////////////////////////////////code challenge 37 //////////////////////////////////
+
+
+    @Test
+    @DisplayName("between 3 nodes")
+    public void test12(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+
+        graph.addEdgeWeight("A","B",5);
+        graph.addEdge("A","B");
+        graph.addEdgeWeight("A","D",6);
+        graph.addEdge("A","D");
+        graph.addEdgeWeight("D","C",4);
+        graph.addEdge("D","C");
+        graph.addEdgeWeight("B","C",3);
+        graph.addEdge("B","C");
+
+        String[] arr={"A","B","C"};
+
+        assertEquals(8,graph.businessTrip(graph,arr));
+    }
+
+    @Test
+    @DisplayName("between 2 nodes")
+    public void test13(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+
+        graph.addEdgeWeight("A","B",5);
+        graph.addEdge("A","B");
+        graph.addEdgeWeight("A","D",6);
+        graph.addEdge("A","D");
+        graph.addEdgeWeight("D","C",4);
+        graph.addEdge("D","C");
+        graph.addEdgeWeight("B","C",3);
+        graph.addEdge("B","C");
+
+        String[] arr={"A","B"};
+
+        assertEquals(5,graph.businessTrip(graph,arr));
+    }
+
+    @Test
+    @DisplayName("no edges ")
+    public void test14(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+
+        graph.addEdgeWeight("A","B",5);
+        graph.addEdge("A","B");
+        graph.addEdgeWeight("A","D",6);
+        graph.addEdge("A","D");
+        graph.addEdgeWeight("D","C",4);
+        graph.addEdge("D","C");
+        graph.addEdgeWeight("B","C",3);
+        graph.addEdge("B","C");
+
+        String[] arr={"A","C"};
+
+        assertEquals(0,graph.businessTrip(graph,arr));
+    }
 }
