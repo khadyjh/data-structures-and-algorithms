@@ -6,7 +6,10 @@ package challenge35;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -111,4 +114,70 @@ class AppTest {
         Graph graph=new Graph();
         assertEquals("",graph.toStringSimpleGraph());
     }
+
+
+
+    ///////////////////////////////////////////////////////////code challenge 36 //////////////////////////////////
+
+    @Test
+    @DisplayName("empty graph")
+    public void test9(){
+        Graph graph=new Graph();
+        assertNull(graph.breadthFirst("A"));
+
+    }
+
+    @Test
+    @DisplayName("not Empty graph")
+    public void test10(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+
+        graph.addEdge("A","B");
+
+        graph.addEdge("B","C");
+        graph.addEdge("B","D");
+        graph.addEdge("C","D");
+        graph.addEdge("C","F");
+        graph.addEdge("C","E");
+        graph.addEdge("F","E");
+        graph.addEdge("F","D");
+
+        Set<String> exp=new HashSet<>();
+        exp.add("A");
+        exp.add("B");
+        exp.add("C");
+        exp.add("D");
+        exp.add("F");
+        exp.add("E");
+
+        assertEquals(exp,graph.breadthFirst("A"));
+
+    }
+
+    @Test
+    @DisplayName("graph of 3 node")
+    public void test11(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+
+        graph.addEdge("A","B");
+        graph.addEdge("B","C");
+
+        Set<String> exp=new HashSet<>();
+        exp.add("A");
+        exp.add("B");
+        exp.add("C");
+
+        assertEquals(exp,graph.breadthFirst("A"));
+
+    }
+
 }
