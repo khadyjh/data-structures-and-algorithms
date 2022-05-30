@@ -9,6 +9,8 @@ public class Graph{
 
     public Graph() {
         list=new HashMap<>();
+
+        // weighted
         list2=new HashMap<>();
     }
 
@@ -127,5 +129,27 @@ public class Graph{
             visited.add(vertex);
         }
         return visited;
+    }
+
+
+    public int businessTrip(Graph graph, String[] cityName){
+        int cost=0;
+        for (int i = 0; i < cityName.length; i++) {
+            if(i+2>cityName.length){
+                break;
+            }
+            List<Vertex> neighbors=graph.getNeighbors(cityName[i]);
+            if(neighbors.contains(new Vertex(cityName[i+1]))){
+                List<Edge> edges=graph.getWeightedNeighbors(cityName[i]);
+                for (int j = 0; j < edges.size(); j++) {
+                    if(new Vertex(cityName[i+1]).equals(graph.getNeighbors(cityName[i]).get(j))){
+                        cost=cost+edges.get(i).getWeight();
+                    }
+                }
+            }else {
+                return 0;
+            }
+        }
+        return cost;
     }
 }
