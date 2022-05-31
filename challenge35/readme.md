@@ -59,3 +59,19 @@ write method to calculate the weight in a weighted graph
 
 ## Solution
 businessTrip() => method accept two argument the graph and array of string and calculate the weight of linked edges  
+
+
+# challenge 38
+write method to implement depth first search on graph
+
+## Whiteboard Process
+![depthFirst](../img/ch381.png)
+![depthFirst](../img/ch38.png)
+
+## Approach & Efficiency
+- the method traverse through the graph element two times so the time complexity O(n^2)
+- in the method new data structure used so the space complexity O(n)
+- n number of element in the graph
+
+## Solution
+depthFirst() => method accept one element as the root of the graph then traverse through the element in depth first Approach 

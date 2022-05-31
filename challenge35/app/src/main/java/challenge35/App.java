@@ -15,18 +15,27 @@ public class App {
         graph.addNode("B");
         graph.addNode("C");
         graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
 
-
-        graph.addEdgeWeight("A","B",5);
-        graph.addEdge("A","B");
-        graph.addEdgeWeight("A","D",6);
         graph.addEdge("A","D");
-        graph.addEdgeWeight("D","C",4);
-        graph.addEdge("D","C");
-        graph.addEdgeWeight("B","C",3);
+        graph.addEdge("A","B");
+
         graph.addEdge("B","C");
+        graph.addEdge("B","D");
+
+        graph.addEdge("G","C");
+
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+
+        graph.addEdge("F","H");
+
 
         String[] arr={"A","B","C"};
-        System.out.println(graph.businessTrip(graph,arr));
+        System.out.println(graph.depthFirst("F"));
     }
 }
