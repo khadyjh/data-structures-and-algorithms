@@ -153,4 +153,30 @@ public class Graph{
         }
         return cost;
     }
+
+    ///////////////////////////////////////////////////////////challenge 37 //////////////////////////////////////////
+    public Set<String> depthFirst(String root){
+        List<Vertex> nods=getNods();
+        Vertex node=new Vertex(root);
+        if(!nods.contains(node)){
+            return null;
+        }
+        Set<String> visited = new LinkedHashSet<>();
+        Stack<String> stack=new Stack<>();
+
+        stack.push(root);
+        while (!stack.isEmpty()){
+            String vertex= stack.pop();
+            for (Vertex v :
+                    getNeighbors(vertex)) {
+                if(!visited.contains(v.getValue())){
+                    if(!stack.contains(v.getValue())){
+                        stack.push(v.getValue());
+                    }
+                }
+            }
+            visited.add(vertex);
+        }
+        return visited;
+    }
 }

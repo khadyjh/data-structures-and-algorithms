@@ -251,4 +251,93 @@ class AppTest {
 
         assertEquals(0,graph.businessTrip(graph,arr));
     }
+
+    ///////////////////////////////////////////////////////////code challenge 38 //////////////////////////////////
+
+    @Test
+    @DisplayName("normal case ")
+    public void test15(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+
+        graph.addEdge("A","D");
+        graph.addEdge("A","B");
+
+        graph.addEdge("B","C");
+        graph.addEdge("B","D");
+
+        graph.addEdge("G","C");
+
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+
+        graph.addEdge("F","H");
+
+        Set<String> exp=new HashSet<>();
+        exp.add("A");
+        exp.add("B");
+        exp.add("C");
+        exp.add("G");
+        exp.add("D");
+        exp.add("E");
+        exp.add("H");
+        exp.add("F");
+
+        assertEquals(exp,graph.depthFirst("A"));
+    }
+
+    @Test
+    @DisplayName("empty  ")
+    public void test16(){
+        Graph graph=new Graph();
+        assertNull(graph.breadthFirst("A"));
+    }
+
+    @Test
+    @DisplayName("deffer-ant root ")
+    public void test17(){
+        Graph graph=new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+
+        graph.addEdge("A","D");
+        graph.addEdge("A","B");
+
+        graph.addEdge("B","C");
+        graph.addEdge("B","D");
+
+        graph.addEdge("G","C");
+
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+
+        graph.addEdge("F","H");
+
+        Set<String> exp=new HashSet<>();
+        exp.add("F");
+        exp.add("H");
+        exp.add("D");
+        exp.add("E");
+        exp.add("B");
+        exp.add("C");
+        exp.add("G");
+        exp.add("A");
+
+        assertEquals(exp,graph.depthFirst("F"));
+    }
 }
